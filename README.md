@@ -1,2 +1,2 @@
-#Pagina de Receita 
+# Pagina de Receita 
 
