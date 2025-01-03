@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p {
+        text-align: justify;
+        line-height: 1.6;
+        text-indent: 2em;
+        text-transform: capitalize;
+      }
+
+      /* Style the header */
+      header {
+        background-color: #943876;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+
+      /* Create two columns/boxes that floats next to each other */
+      nav {
+        float: left;
+        width: 30%;
+        height: 300px;
+        /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+      }
+
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      article {
+        float: left;
+        width: 70%;
+        padding: 20px;
+
+      }
+
+      /* Clear floats after the columns */
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the footer */
+      footer > p {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #943876;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h2>Desenvolvimento Web</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">1.atividade</a></li>
+          <li><a href="#">2.atividade</a></li>
+          <li><a href="#">3.atividade</a></li>
+          <li><a href="#">4.atividade</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <h1>Fundamentos em Desenvolvimento web</h1>
+        <p>
+          HTML e CSS são as bases do desenvolvimento web. O HTML (HyperText
+          Markup Language) define a estrutura das páginas, organizando o
+          conteúdo com elementos como títulos, parágrafos e links.
+        </p>
+        <p>
+          Ele também permite o uso de tags semânticas para melhorar a
+          acessibilidade e a otimização para motores de busca (SEO). Já o CSS
+          (Cascading Style Sheets) controla o design e o layout, estilizando
+          elementos com cores, fontes, espaçamentos e posições.
+        </p>
+        <p>
+          Juntos, eles permitem criar páginas atrativas, responsivas e
+          acessíveis, adaptadas para diferentes dispositivos. A prática e o uso
+          de boas ferramentas, como frameworks e inspeção de código, são
+          essenciais para dominar essas tecnologias.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p>Talento Tec - 2024</p>
+    </footer>
+  </body>
+</html>
