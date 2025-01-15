@@ -4,83 +4,7 @@
     <title>Web</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      * {
-        margin: 0px;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      p {
-        text-align: justify;
-        line-height: 1.6;
-        text-indent: 2em;
-        text-transform: capitalize;
-      }
-
-      /* Style the header */
-      header {
-        background-color: #943876;
-        padding: 30px;
-        text-align: center;
-        font-size: 35px;
-        color: white;
-      }
-
-      /* Create two columns/boxes that floats next to each other */
-      nav {
-        float: left;
-        width: 30%;
-        height: 300px;
-        /* only for demonstration, should be removed */
-        background: #ccc;
-        padding: 20px;
-      }
-
-      /* Style the list inside the menu */
-      nav ul {
-        list-style-type: none;
-        padding: 0;
-      }
-
-      article {
-        float: left;
-        width: 70%;
-        padding: 20px;
-
-      }
-
-      /* Clear floats after the columns */
-      section::after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-
-      /* Style the footer */
-      footer > p {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        background-color: #943876;
-        padding: 10px;
-        text-align: center;
-        color: white;
-      }
-
-      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-      @media (max-width: 600px) {
-        nav,
-        article {
-          width: 100%;
-          height: auto;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="estilo.css" />
   </head>
 
   <body>
@@ -92,12 +16,23 @@
       <nav>
         <ul>
           <li><a href="#">1.atividade</a></li>
-          <li><a href="https://DomeniqueRosa.github.io/app-layout">2.atividade</a></li>
-          <li><a href="https://DomeniqueRosa.github.io/app-calculadora">3.atividade</a></li>
-          <li><a href="#">4.atividade</a></li>
+          <li>
+            <a href="https://DomeniqueRosa.github.io/app-layout">2.atividade</a>
+          </li>
+          <li>
+            <a href="https://DomeniqueRosa.github.io/app-calculadora"
+              >3.atividade</a
+            >
+          </li>
+          <li>
+            <a href="https://DomeniqueRosa.github.io/app-jogo-da-velha"
+              >4.atividade</a
+            >
+          </li>
         </ul>
       </nav>
-
+    </section>
+    <section
       <article>
         <h1>Fundamentos em Desenvolvimento web</h1>
         <p>

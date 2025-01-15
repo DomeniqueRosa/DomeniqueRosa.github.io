@@ -1,0 +1,73 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  p {
+    text-align: justify;
+    line-height: 1.6;
+    text-indent: 2em;
+    text-transform: capitalize;
+  }
+
+
+  header {
+    background-color: #943876;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+
+  nav {
+
+    background: #ccc;
+    padding: 20px;
+  }
+
+
+   li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0;
+    color: red;
+  }
+
+  article {
+    float: left;
+    width: 70%;
+    padding: 20px;
+
+  }
+
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Style the footer */
+  footer > p {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #943876;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  @media (max-width: 600px) {
+    nav,
+    article {
+      width: 100%;
+      height: auto;
+    }
+  }
