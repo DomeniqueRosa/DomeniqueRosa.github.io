@@ -63,7 +63,7 @@ ul li{
     text-decoration: none;
 }
 
-li:hover li:focus{
+li:hover, li:focus{
     background-color: hsl(75, 94%, 57%);
 }
 
