@@ -1,0 +1,79 @@
+@font-face {
+    font-family: youngSerif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight:400;
+}
+@font-face {
+    font-family: outfit;
+    src: url(assets/fonts/outfit/static/Outfit-ExtraLight.ttf);
+    
+}
+html{
+    /* text-align: justify; */
+    font-family: outfit;
+    background-color: hsl(30, 54%, 90%);
+}   
+
+body{
+    
+    border-radius: 10px;
+    padding: 5%;
+    margin: 10% 20%;
+    background-color: hsl(0, 0%, 100%);
+}
+#caixa-img{
+    border-radius: 10px;
+}
+
+#img-comida{
+    border-radius: 10px;
+    padding: 10;
+    max-width: 100%;
+    height: auto;
+}
+#info {
+    border-radius: 10px;
+    padding: 5px 10px ;
+    background-color:   hsl(330, 100%, 98%);
+    ;
+}
+
+#titulo-time {
+
+    font-family: 'youngSerif';
+    color: hsl(332, 51%, 32%);
+}
+
+li{
+    
+    list-style-position: inside;
+    line-height: 2;
+}
+h2{
+
+    font-family: 'youngSerif';
+    color: hsl(14, 45%, 36%);
+}
+
+h1{
+    color: rgb(90, 90, 90);
+    font-family: 'youngSerif'
+}
+
+table{
+    width: 100%;
+}
+td{
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 100px;
+  border-bottom: 1px solid rgb(233, 231, 231);
+}
+.cal{
+    color: hsl(14, 45%, 36%);
+    size: 30px;
+}
+.attribution{
+    text-align: center;
+}
