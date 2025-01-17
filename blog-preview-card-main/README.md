@@ -17,7 +17,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/DomeniqueRosa/DomeniqueRosa.github.io/tree/main/blog-preview-card-main)
-- Live Site URL: [Add live site URL here](https://https://domeniquerosa.github.io/blog-preview-card-main/)
+- Live Site URL: [Add live site URL here](https://domeniquerosa.github.io/blog-preview-card-main/)
 
 
 ### Built with
