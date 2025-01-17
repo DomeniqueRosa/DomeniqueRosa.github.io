@@ -55,7 +55,7 @@ h1{
 .tag-card {
   border: gray;
   background-color: hsl(47, 88%, 63%);
-  max-width: 40px;
+  max-width: 4rem;
   padding: 5px 10px;
   border-radius: 3px;
   text-align: left;
@@ -71,7 +71,11 @@ h1{
     width: 10%;
     padding-right: 10px;
 }
-
+.rodape-name, .tag-card, .sub-rodape{
+  font-weight: 800;
+  color:hsl(0, 0%, 7%);
+  font-size: 1rem;
+}
 p {
   color: hsl(0, 0%, 42%);
 }
