@@ -1,0 +1,80 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0px;
+  position: fixed;
+  background-color: hsl(47, 57%, 36%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: hsl(47, 88%, 63%);
+}
+
+.card {
+  /* deixar item no meio */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* fim */
+  background-color: hsl(0, 0%, 100%);
+  width: 350px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 5px 5px  hsl(0, 0%, 7%);
+  padding: 5px;
+}
+.img-card {
+  max-width: 95%;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+h1,
+h4,
+p,
+.rodape-card,
+h6 {
+  align-items: first;
+  padding: 10px;
+}
+h1{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.tag-card {
+  border: gray;
+  background-color: hsl(47, 88%, 63%);
+  max-width: 40px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-align: left;
+  margin: 15px 10px 0px 10px;
+}
+.rodape-card {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.img-rodape{
+    width: 10%;
+    padding-right: 10px;
+}
+
+p {
+  color: hsl(0, 0%, 42%);
+}
+h1:hover{
+    color:hsl(47, 100%, 47%);
+}
