@@ -15,20 +15,19 @@ body{
 main{
     background-color:hsl(0, 0%, 8%);
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 1fr 3fr 1fr ;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
 }
 .card{
     background-color: hsl(0, 0%, 12%);
-    grid-column: 2/3;
-    grid-row: 2;
     max-width: 400px;
     align-self: center;
     justify-self: center;
     padding: 20px;
     border-radius: 10px;
     display: grid;
-
 
 }
 img{
@@ -43,7 +42,7 @@ h1{
     font-weight: 500;
 }
 
-h4{
+.text-yellow{
     
     text-align: center;
     color: hsl(75, 94%, 57%);
@@ -97,12 +96,6 @@ li:hover > a{
     font-size: 0.8em;
 }
 
-@media (max-width: 400px) {
-    main{
-        grid-template-columns: 0.1fr 2fr 0.1fr;
-    }
-    
-}
 strong{
     color: hsl(75, 94%, 57%);;
 }
