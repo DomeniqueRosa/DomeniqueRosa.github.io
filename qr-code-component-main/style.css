@@ -1,0 +1,52 @@
+/* Importando a fonte Outfit do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    background-color: hsl(212, 45%, 89%);
+    height: 100vh; /* Usa 100% da altura da tela */
+    font-family: "Outfit", sans-serif;
+    font-weight: 400; /* Peso 400 para o corpo do texto */
+}
+
+img,
+main {
+    border-radius: 10px;
+}
+main {
+    background-color: hsl(0, 0%, 100%);
+    width: 320px;
+    height: 466px;
+    text-align: center;
+    padding: 16px;
+    box-shadow: 0 4px 8px hsl(216, 15%, 48%, 10%);
+}
+img {
+    width: 95%;
+}
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700; /* Usando o peso 700 (negrito) */
+  color: hsl(218, 44%, 22%);
+  padding-top: 1rem;
+  font-size: 22px;
+}
+p{
+    font-weight: 400;
+    color: hsl(216, 15%, 48%);
+    padding-top: 1em;
+}
+
+.text{
+    align-items: center;
+    width: 288px;
+    padding: 10px;
+}
