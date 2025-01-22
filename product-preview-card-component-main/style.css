@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+
+
+}
+main{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 37.5rem;
+  background-color:  hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.right{
+
+  padding-left: 0px ;
+  text-align: left;
+  padding: 0rem 1.5rem;
+}
+
+
+.label{
+  color: hsl(158, 36%, 37%);
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+h1, .price-main{
+  font-family: 'Fraunces', serif;
+  line-height: 1;
+}
+.main-text{
+  padding: 2rem 0;
+  color : hsl(228, 12%, 48%);
+  line-height: 1.5;
+  
+}
+
+.price{
+  display: flex;
+  align-items: center;
+}
+
+.price-main{
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.price-old{
+  padding-left: 1rem;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  
+}
+button{
+  background-color: hsl(158, 36%, 37%);
+  width: 100%;
+  margin: 1.5rem 0;
+  color: aliceblue;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 0.5rem ;
+  border: 0px;
+  font-weight: 700;
+}
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.btn img{
+  width: 10%;
+  transform: scaleX(-1);
+  margin-right: 10px;
+  background: transparent;
+  
+}
+
+.attribution{
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  background-color: hsl(30, 38%, 92%);
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: hsl(228, 12%, 48%);
+  
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  
+}
+@media screen and (max-width: 600px) {
+
+  img{
+    border-radius: 10px 10px 0 0 ;
+    max-width: 100%;
+  }
+  main {
+    display: block;
+    max-width: 80%;
+    margin-top: 8rem;
+
+    
+  }
+  .img{
+    content: url('./images/image-product-mobile.jpg'); /* Substitui visualmente a imagem */
+  }
+
+}
+button:hover{
+  background-color:  hsl(212, 21%, 14%);
+  cursor: pointer;
+}
+  
