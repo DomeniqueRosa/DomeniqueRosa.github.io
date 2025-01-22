@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* neutras */
+  --Dark_Blue: hsl(234, 12%, 34%);
+  --Grayish_Blue: hsl(229, 6%, 66%);
+  --Light_Gray: hsl(0, 0%, 98%);
+}
+* {
+  /* margin: 0;
+    padding: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--Dark_Blue);
+  background-color: var(--Light_Gray);
+}
+img {
+  max-width: 20%;
+  float: right;
+}
+
+.text-light {
+  font-weight: 100;
+}
+p {
+  color: var(--Grayish_Blue);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr;
+  padding: 0rem 2rem 10rem 2rem;
+  grid-template-areas:
+    "text"
+    "cards";
+  justify-items: center;
+  gap: 2rem;
+}
+.text {
+  grid-area: text;
+  text-align: center;
+  grid-row: 1/1;
+  /* width: 60%; */
+}
+.cards {
+  grid-area: cards;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "card-1 card-2 card-4"
+    "card-1 card-3 card-4";
+  align-items: center;
+  gap: 2rem;
+}
+.card-1 {
+  grid-area: card-1;
+  border-top: 5px solid var(--cyan);
+}
+
+.card-2 {
+  border-top: 5px solid var(--red);
+}
+.card-3 {
+  border-top: 5px solid var(--orange);
+}
+
+.card-4 {
+  border-top: 5px solid var(--blue);
+  grid-area: card-4;
+}
+.card {
+  box-shadow: 0 6px 12px var(--Grayish_Blue);
+  max-width: 300px;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 750px) {
+  body {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+  }
+  .container,
+  .cards,
+  .card,
+  .text {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .card img {
+    align-self: flex-end;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+  .text{
+    width: 100%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
