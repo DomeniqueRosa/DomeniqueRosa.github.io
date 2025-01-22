@@ -44,7 +44,7 @@ strong {
   grid-template-areas:
     "area-1 area-1 area-2 area-5"
     "area-3 area-4 area-4 area-5";
-  gap: 2rem;
+  column-gap: 1rem;
   justify-content: center;
 }
 
