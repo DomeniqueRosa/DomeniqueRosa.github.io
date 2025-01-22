@@ -11,7 +11,7 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 
 ### Screenshot
-
+![Img](./images/my_scream.png)
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/DomeniqueRosa/DomeniqueRosa.github.io/tree/main/four-card-feature-section-master)
