@@ -17,6 +17,7 @@ body {
   background-color: var(--Light-grayish-blue);
   color: var(--White);
   margin: 10rem;
+  font-size: 0.8rem;
 }
 p {
   text-align: justify;
