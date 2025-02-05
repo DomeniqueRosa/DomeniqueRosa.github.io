@@ -37,7 +37,7 @@ I learned about position: relative and position: absolute, understanding how the
 
 
 ## Author
-- GitHub - [Alires Rosa](https://github.com/AliresRosa)
+- GitHub - [Alires Rosa](https://github.com/DomeniqueRosa)
 
 
 
