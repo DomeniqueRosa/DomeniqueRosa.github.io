@@ -7,9 +7,10 @@
 
     <!-- adc normalize -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
     />
+    <link rel="stylesheet" href="./style.css" />
 
     <link
       rel="icon"
@@ -20,43 +21,52 @@
 
     <title>Frontend Mentor | NFT preview card component</title>
 
-    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <main>
+  <body class="grid">
+    <main class="flex">
       <div class="card">
-        <img
-          src="./images/image-equilibrium.jpg"
-          alt="Equilibrium NFT"
-          class="card__image"
-        />
-        <h1>Equilibrium #3429</h1>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
-        <div class="card__info">
-          <div class="card__info_left">
-            <p>0.041 ETH</p>
-          </div>
-          <div class="card__info_right">
-            <p>3 days left</p>
-          </div>
-        </div>
-        <hr />
-        <div class="card__creator">
+        <div class="card__image-container">
           <img
-            src="./images/avatar-jules-wyvern.jpg"
-            alt="Jules Wyvern"
-            class="card__creator_avatar"
+            src="./images/image-equilibrium.jpg"
+            alt="Equilibrium NFT"
+            class="card__image"
+            role="button"
           />
-          <p>Creation of <strong>Jules Wyvern</strong></p>
+            <div class="card__view-container" id="card__view-container" role="button" onclick="handleClick()">
+            <img
+              src="./images/icon-view.svg"
+              alt="Favorite"
+              class="card__favorite"
+            />
+            </div>
+          
+        </div>
+        <div class="card__info">
+          <h1>Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+          <div class="card__info_space-between flex">
+            <div class="card__info_left flex">
+              <img src="./images/icon-ethereum.svg" alt="" />
+              <p>0.041 ETH</p>
+            </div>
+            <div class="card__info_right flex">
+              <img src="./images/icon-clock.svg" alt="" />
+              <p>3 days left</p>
+            </div>
+          </div>
+
+          <hr />
+          <div class="card__creator flex">
+            <img
+              src="./images/image-avatar.png"
+              alt="Jules Wyvern"
+              class="card__creator_avatar"
+            />
+            <p>Creation of <strong>Jules Wyvern</strong></p>
+          </div>
         </div>
       </div>
     </main>
-    <footer>
-      <div class="attribution">
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Alires Rosa</a>.
-      </div>
-    </footer>
   </body>
+  <script src="./script.js"></script>
 </html>
