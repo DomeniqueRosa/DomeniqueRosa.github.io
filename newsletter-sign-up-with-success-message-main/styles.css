@@ -12,10 +12,10 @@ body {
   --neutral-white: hsl(0, 0%, 100%);
 }
 
-.flex {
+/* .flex {
   display: flex;
   flex-direction: column;
-}
+} */
 main {
   max-width: 375px;
   margin: 0 auto;
@@ -30,11 +30,35 @@ main {
   margin: 0.5em 0;
   border: 1px solid var(--neutral-grey);
   border-radius: 10px;
-
 }
-
-.form__message-sucess {
-  display: none;
+.form input:hover,
+.form button:hover {
+  cursor: pointer;
+}
+.form button:hover {
+  border: none;
+  transition: background-color 0.3s ease;
+  background-image: radial-gradient(
+    circle,
+    #ff6257,
+    #f8655b,
+    #f1685f,
+    #e96b63,
+    #e26e66
+  );
+}
+.form__message-sucess.active {
+    display: block;
+    padding: 1em;
+    margin: 1em 0;
+    background-color: rgba(179, 138, 135, 0.1);
+    border: 1px solid var(--primary-tomato);
+    border-radius: 10px;
+    color: var(--primary-tomato);
+    text-align: center;
+}
+.form__message-sucess{
+    display: none;
 }
 
 .form button {
@@ -51,16 +75,18 @@ main {
 ul {
   margin: 0;
   padding: 0;
-
 }
 
-p,li,label,h1 {
-    line-height: 1.2em;
-    color : var(--neutral-dark-slate-grey);
+p,
+li,
+label,
+h1 {
+  line-height: 1.2em;
+  color: var(--neutral-dark-slate-grey);
 }
-label{
-    font-size: 10px;
-    font-weight: 700;
+label {
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .form-text ul li {
@@ -78,10 +104,19 @@ label{
   color: var(--neutral-grey);
 }
 
-@media screen and (max-width: 1440px) and (min-width: 700px) {
-    main{
-        transform: all 5s;
-        background-color: cyan;
-    }
 
+.email.error {
+  border: var(--primary-tomato) 1px solid;
+  background-color: rgba(255, 98, 87, 0.2);
+  content: "Valid email is required";
+}
+.email.error::placeholder {
+  color: var(--primary-tomato);
+}
+.error {
+  color: var(--primary-tomato);
+}
+
+.container__form.hidden {
+    display: none;
 }

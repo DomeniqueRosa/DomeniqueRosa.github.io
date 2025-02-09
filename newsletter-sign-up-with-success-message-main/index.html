@@ -18,26 +18,29 @@
   <body>
     <!-- Sign-up form start -->
 
-    <main class="container flex">
-      <div>
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+    <main class="container">
+      <div class="container__form">
+
+        <div >
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+        </div>
+        <section class="form-text">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          
+          <form action="#" method="POST" class="form" id="form">
+            <label for="email">Email address</label><br>
+            <input class="email" type="email" id="email" name="email" placeholder="email@company.com"><br>
+            <button type="submit" onclick="handleSubmit">Subscribe to monthly newsletter</button>
+          </form>
+        </section>
       </div>
-      <section class="form-text">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-
-        <form action="#" method="POST" class="form">
-          <label for="email">Email address</label><br>
-          <input type="email" id="email" name="email" placeholder="email@company.com"><br>
-          <button type="submit">Subscribe to monthly newsletter</button>
-        </form>
-      </section>
-
+        
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
@@ -61,4 +64,5 @@
       </div>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>
