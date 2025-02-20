@@ -1,7 +1,6 @@
 <script setup lang="ts">
-
-import {useRoute} from 'vue-router'
-import { useRouter } from 'vue-router';
+import { useRoute } from "vue-router";
+import { useRouter } from "vue-router";
 
 // para pegar valor enviado pela rota
 const route = useRoute();
@@ -11,30 +10,31 @@ const email = route.params.email;
 const router = useRouter();
 
 function retornar() {
-  router.push('/');
+  router.push("/");
 }
-
 </script>
 
 <template>
   <!-- Success message start -->
   <section class="form__message-sucess">
     <div>
-      <img src="../assets/icon-success.svg" alt="icone de seta">
+      <img src="../assets/icon-success.svg" alt="icone de seta" />
     </div>
+
     <h2>Thanks for subscribing!</h2>
     <p>
-      A confirmation email has been sent to <b>{{ email }}</b>. Please
-      open it and click the button inside to confirm your subscription.
+      A confirmation email has been sent to <b>{{ email }}</b
+      >. Please open it and click the button inside to confirm your
+      subscription.
     </p>
-    <button  @click="retornar">Dismiss message</button>
+    <button @click="retornar">Dismiss message</button>
   </section>
 
-  <!-- Success message end --> 
+  <!-- Success message end -->
 </template>
 
 <style>
-*{
+* {
   margin: 0;
   padding: 0px;
 }
@@ -50,20 +50,20 @@ function retornar() {
   box-shadow: -20px -7px 35px 0 var(--color-dark-slate-grey);
 }
 
-img{
+img {
   width: 15%;
 }
 
-h2{
+h2 {
   font-size: 3em;
   padding: 20px 0;
 }
-p{
+p {
   font-size: 0.8em;
   line-height: 1.5;
 }
 
-button{
+button {
   margin-top: 30px;
   width: 100%;
   padding: 15px;
@@ -73,5 +73,21 @@ button{
   cursor: pointer;
   font-size: 1em;
   text-align: center;
+}
+/* Estilos para mobile */
+@media (max-width: 768px) {
+  body{
+    background-color: var(--neutral-white);
+  }
+  .form__message-sucess {
+    height: 100vh;
+    padding: 2em;
+    margin-top: 15em;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  button {
+    margin-top: 12em;
+  }
 }
 </style>

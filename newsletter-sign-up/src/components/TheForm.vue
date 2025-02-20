@@ -7,7 +7,6 @@ const router = useRouter();
 const email = ref("");
 const emailTouched = ref(false);
 
-
 const validateEmail = (email: string) => {
   const re = /\S+@\S+\.\S+/;
   return re.test(email);
@@ -15,14 +14,11 @@ const validateEmail = (email: string) => {
 const isValidEmail = computed(() => validateEmail(email.value));
 
 const enviar = () => {
-  if(isValidEmail.value){
+  if (isValidEmail.value) {
     console.log(email.value);
-    router.push(`/success/${email.value}`)
+    router.push(`/success/${email.value}`);
   }
-
-}
-
-
+};
 </script>
 
 <template>
@@ -36,15 +32,14 @@ const enviar = () => {
         <li>And much more!</li>
       </ul>
 
-      <form
-        action="#"
-        method="POST"
-        class="form"
-        
-      >
+      <form action="#" method="POST" class="form">
         <div class="label-erros">
-          <label for="email" :class="{ 'error' : !isValidEmail && emailTouched}">Email address</label><br />
-          <p v-if="!isValidEmail && emailTouched" class="error">Valid email is required</p>
+          <label for="email" :class="{ error: !isValidEmail && emailTouched }"
+            >Email address</label
+          ><br />
+          <p v-if="!isValidEmail && emailTouched" class="error">
+            Valid email is required
+          </p>
         </div>
         <input
           type="email"
@@ -52,11 +47,12 @@ const enviar = () => {
           name="email"
           v-model="email"
           placeholder="email@company.com"
-            :class="{ 'email-error': !isValidEmail && emailTouched }"
-            @focus="emailTouched = true"
-          
+          :class="{ 'email-error': !isValidEmail && emailTouched }"
+          @focus="emailTouched = true"
         /><br />
-        <button :disabled="!isValidEmail" type="submit" @click="enviar">Subscribe to monthly newsletter</button>
+        <button :disabled="!isValidEmail" type="submit" @click="enviar">
+          Subscribe to monthly newsletter
+        </button>
       </form>
     </section>
     <div class="form-image">
@@ -66,7 +62,7 @@ const enviar = () => {
 </template>
 
 <style scoped>
-.label-erros{
+.label-erros {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -165,6 +161,22 @@ label {
   font-size: 0.75em;
   font-weight: bold;
 }
+/* Estilos para mobile */
+@media (max-width: 768px) {
+  main {
+    margin: 0;
+    padding: 0;
+    flex-direction: column-reverse; /* Empilha os elementos */
+  }
 
-
+  img {
+    content: url("../assets/illustration-sign-up-mobile.svg");
+  }
+  ul{
+    padding: 10px 0px;
+  }
+  ul li{
+    padding: 5px 0;
+  }
+}
 </style>
