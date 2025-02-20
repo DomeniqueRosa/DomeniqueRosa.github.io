@@ -1,15 +1,8 @@
-<script setup lang="ts">
-import TheForm from './components/TheForm.vue';
-
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
- 
-  <TheForm />
-
+  <!-- adc para navegar nos componentes -->
+  <router-view />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
