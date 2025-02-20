@@ -59,6 +59,8 @@ body {
 .card__view-container.active{
   opacity: 40%;
 }
+
+
 .card__favorite{
   position: absolute;
   top: 50%;

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+
+    <main class="container">
+      <div class="container__form">
+
+        <div >
+          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+        </div>
+        <section class="form-text">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          
+          <form action="#" method="POST" class="form" id="form">
+            <label for="email">Email address</label><br>
+            <input class="email" type="email" id="email" name="email" placeholder="email@company.com"><br>
+            <button type="submit" onclick="handleSubmit">Subscribe to monthly newsletter</button>
+          </form>
+        </section>
+      </div>
+        
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <section class="form__message-sucess">
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+          Please open it and click the button inside to confirm your
+          subscription.
+        </p>
+        <button>Dismiss message</button>
+      </section>
+
+      <!-- Success message end -->
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Alires</a>.
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
