@@ -1,15 +1,28 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const email = ref("");
 const emailTouched = ref(false);
 
-const isValidEmail = computed(() => validateEmail(email.value));
 
 const validateEmail = (email: string) => {
   const re = /\S+@\S+\.\S+/;
   return re.test(email);
 };
+const isValidEmail = computed(() => validateEmail(email.value));
+
+const enviar = () => {
+  if(isValidEmail.value){
+    console.log(email.value);
+    router.push(`/success/${email.value}`)
+  }
+
+}
+
+
 </script>
 
 <template>
@@ -27,7 +40,7 @@ const validateEmail = (email: string) => {
         action="#"
         method="POST"
         class="form"
-        @submit.prevent="validateEmail(email)"
+        
       >
         <div class="label-erros">
           <label for="email" :class="{ 'error' : !isValidEmail && emailTouched}">Email address</label><br />
@@ -43,7 +56,7 @@ const validateEmail = (email: string) => {
             @focus="emailTouched = true"
           
         /><br />
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <button :disabled="!isValidEmail" type="submit" @click="enviar">Subscribe to monthly newsletter</button>
       </form>
     </section>
     <div class="form-image">
@@ -99,19 +112,6 @@ main {
     #e26e66
   );
 }
-.form__message-sucess.active {
-  display: block;
-  padding: 1em;
-  margin: 1em 0;
-  background-color: rgba(179, 138, 135, 0.1);
-  border: 1px solid var(--primary-tomato);
-  border-radius: 10px;
-  color: var(--primary-tomato);
-  text-align: center;
-}
-.form__message-sucess {
-  display: none;
-}
 
 .form button {
   width: 100%;
@@ -148,12 +148,6 @@ label {
 .form-text li::marker {
   display: block;
   text-align: center !important;
-}
-
-.attribution {
-  text-align: center;
-  font-size: 11px;
-  color: var(--neutral-grey);
 }
 
 .email-error {
