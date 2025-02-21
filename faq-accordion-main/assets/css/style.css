@@ -1,0 +1,17 @@
+/* Definindo a fonte WorkSans Regular */
+@font-face {
+    font-family: 'WorkSans';
+    src: url('../assets/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;  
+    font-style: normal;
+  }
+  
+  /* Definindo a fonte WorkSans Italic */
+  @font-face {
+    font-family: 'WorkSans-Italic';
+    src: url('../assets/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;  /* A faixa de peso para a fonte variável */
+    font-style: italic;
+  }
+
+  

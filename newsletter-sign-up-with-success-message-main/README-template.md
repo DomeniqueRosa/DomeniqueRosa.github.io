@@ -1,6 +1,6 @@
-# Frontend Mentor - FAQ accordion solution
+# Frontend Mentor - Newsletter sign-up form with success message solution
 
-This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -24,8 +24,11 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 Users should be able to:
 
-- Hide/Show the answer to a question when the question is clicked
-- Navigate the questions and hide/show answers using keyboard navigation alone
+- Add their email and submit the form
+- See a success message with their email after successfully submitting the form
+- See form validation messages if:
+  - The field is left empty
+  - The email address is not formatted correctly
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
@@ -106,63 +109,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Steps 1: Instalar o Vite em um projeto existente:
+## Acknowledgments
 
-```
-- npm install --save-dev vite
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-- npm install vue@3
-
-```
-
-## Step 2: Configurar o Vite: crie um arquivo de configuração para o Vite na raiz do seu projeto: vite.config.js.
-
-```
-  import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-});
-
-```
-## Step 3: Instalar o plugin do Vue para o Vite
-```
-npm install --save-dev @vitejs/plugin-vue
-```
-## Step 4: Configurar index
-
-Adicionar no corpo do html
-```
-<div id="app"></div>
-<script type="module" src="/src/main.js"></script>
-
-```
-## Step 5:  Crie um arquivo src/main.js ou src/main.ts caso esteja usando TypeScript
-
-```
-import { createApp } from 'vue';
-import App from './App.vue';
-
-createApp(App).mount('#app');
-```
-## Step 6: Criar o componente principal App.vue
-
-```
-<template>
-  <div id="app">
-    <h1>Bem-vindo ao Vue com Vite!</h1>
-  </div>
-</template>
-
-<script setup>
-
-</script >
-
-<style scoped>
-h1 {
-  color: #42b983;
-}
-</style>
-```
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
