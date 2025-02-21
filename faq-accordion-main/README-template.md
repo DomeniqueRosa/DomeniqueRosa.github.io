@@ -106,8 +106,59 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
+## Steps 1: Instalar o Vite em um projeto existente:
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+```
+- npm install --save-dev vite
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- npm install vue@3
+
+```
+
+## Step 2: Configurar o Vite: crie um arquivo de configuração para o Vite na raiz do seu projeto: vite.config.js.
+
+```
+  import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+});
+
+```
+## Step 3: Instalar o plugin do Vue para o Vite
+
+npm install --save-dev @vitejs/plugin-vue
+
+## Step 4: Configurar index
+
+Adicionar no corpo do html
+
+<div id="app"></div>
+<script type="module" src="/src/main.js"></script>
+
+## Step 5:  Crie um arquivo src/main.js ou src/main.ts caso esteja usando TypeScript
+
+import { createApp } from 'vue';
+import App from './App.vue';
+
+createApp(App).mount('#app');
+
+## Step 6: Criar o componente principal App.vue
+
+<template>
+  <div id="app">
+    <h1>Bem-vindo ao Vue com Vite!</h1>
+  </div>
+</template>
+
+<script setup>
+
+</script >
+
+<style scoped>
+h1 {
+  color: #42b983;
+}
+</style>
