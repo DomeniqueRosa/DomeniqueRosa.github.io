@@ -9,11 +9,9 @@
       :key="index"
       class="question-item"
     >
-      
       <div class="question-label">
-        <label >{{ question.question }}</label>
+        <label>{{ question.question }}</label>
         <input type="checkbox" @click="toggleState(index)" />
-
       </div>
       <p class="question-answer" v-if="question.checked">
         {{ question.answer }}
@@ -27,10 +25,8 @@
 .card {
   width: 600px;
   max-width: 600px;
-  height: 500px;
   padding: 40px;
   border-radius: 16px;
-  overflow: auto;
   background-color: var(--white);
 }
 
@@ -73,9 +69,8 @@ input[type="checkbox"] {
 .question-label {
   padding: 20px 0;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
 }
-
 
 label:hover {
   color: #ad28eb;
@@ -96,24 +91,6 @@ hr {
   border-top: 1px solid var(--light-gray);
   margin-top: 10px;
 }
-
-/* Custom scrollbar styles */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--light-gray);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--light-pink);
-    border-radius: 10px;
-    
-}
-
-
 </style>
 
 <script setup>
