@@ -32,7 +32,7 @@ const enviar = () => {
         <li>And much more!</li>
       </ul>
 
-      <form  class="form">
+      <form class="form">
         <div class="label-erros">
           <label for="email" :class="{ error: !isValidEmail && emailTouched }"
             >Email address</label
@@ -84,14 +84,11 @@ main {
 .form {
   padding-top: 1.5em;
   display: grid;
-  
-
 }
 
-input{
+input {
   border: 1px solid var(--neutral-grey);
 }
-
 
 .form input,
 .form button {
@@ -145,24 +142,21 @@ label {
   font-weight: 700;
 }
 
-ul{
+ul {
   display: grid;
 }
 
-ul li{
+ul li {
   list-style: none;
   display: grid;
   grid-template-columns: 2.5rem auto;
-  
 }
 
 .form-text ul li::before {
   content: url("../assets/icon-list.svg");
-  
 }
 
-
-.email-error{
+.email-error {
   border: var(--primary-tomato) 1px solid;
   background-color: rgba(255, 98, 87, 0.2);
 }
@@ -182,7 +176,7 @@ section > ul {
   margin-top: 1rem;
 }
 
-section > ul li{
+section > ul li {
   margin-top: 0.5rem;
 }
 /* Estilos para mobile */
@@ -196,10 +190,10 @@ section > ul li{
   img {
     content: url("../assets/illustration-sign-up-mobile.svg");
   }
-  ul{
+  ul {
     padding: 10px 0px;
   }
-  ul li{
+  ul li {
     padding: 5px 0;
   }
 }
