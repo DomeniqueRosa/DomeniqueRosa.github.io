@@ -16,18 +16,23 @@
       <p class="question-answer" v-if="question.checked">
         {{ question.answer }}
       </p>
-      <hr />
+      <hr   v-if="index != questions.length -1" />
     </div>
   </div>
 </template>
 
 <style scoped>
 .card {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
   width: 600px;
   max-width: 600px;
   padding: 40px;
   border-radius: 16px;
   background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card__title {
@@ -72,8 +77,9 @@ input[type="checkbox"] {
   font-size: 16px;
 }
 
-label:hover {
+label:hover, label:focus-visible{
   color: #ad28eb;
+  cursor: pointer;
 }
 
 p {
@@ -90,6 +96,27 @@ input[type="checkbox"]:checked {
 hr {
   border-top: 1px solid var(--light-gray);
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  
+  .card {
+    top: 5%;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .card__title > h1 {
+    font-size: 2em;
+  }
+
+  .question-label {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
 </style>
 
