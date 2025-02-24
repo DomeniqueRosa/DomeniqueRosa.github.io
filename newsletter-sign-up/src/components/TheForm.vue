@@ -26,13 +26,13 @@ const enviar = () => {
     <section class="form-text">
       <h1>Stay updated!</h1>
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
+      <ul role="list">
         <li>Product discovery and building what matters</li>
         <li>Measuring to ensure updates are a success</li>
         <li>And much more!</li>
       </ul>
 
-      <form action="#" method="POST" class="form">
+      <form  class="form">
         <div class="label-erros">
           <label for="email" :class="{ error: !isValidEmail && emailTouched }"
             >Email address</label
@@ -48,7 +48,7 @@ const enviar = () => {
           v-model="email"
           placeholder="email@company.com"
           :class="{ 'email-error': !isValidEmail && emailTouched }"
-          @focus="emailTouched = true"
+          @blur="emailTouched = true"
         /><br />
         <button :disabled="!isValidEmail" type="submit" @click="enviar">
           Subscribe to monthly newsletter
@@ -83,10 +83,18 @@ main {
 }
 .form {
   padding-top: 1.5em;
+  display: grid;
+  
+
 }
+
+input{
+  border: 1px solid var(--neutral-grey);
+}
+
+
 .form input,
 .form button {
-  width: 90%;
   padding: 1em;
   margin: 0.5em 0;
   /* border: 1px solid var(--neutral-grey); */
@@ -137,16 +145,24 @@ label {
   font-weight: 700;
 }
 
-.form-text ul li {
-  list-style: url("../assets/icon-list.svg");
-  margin: 0 1.5em;
-}
-.form-text li::marker {
-  display: block;
-  text-align: center !important;
+ul{
+  display: grid;
 }
 
-.email-error {
+ul li{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 2.5rem auto;
+  
+}
+
+.form-text ul li::before {
+  content: url("../assets/icon-list.svg");
+  
+}
+
+
+.email-error{
   border: var(--primary-tomato) 1px solid;
   background-color: rgba(255, 98, 87, 0.2);
 }
@@ -160,6 +176,14 @@ label {
   padding: 0;
   font-size: 0.75em;
   font-weight: bold;
+}
+
+section > ul {
+  margin-top: 1rem;
+}
+
+section > ul li{
+  margin-top: 0.5rem;
 }
 /* Estilos para mobile */
 @media (max-width: 768px) {
