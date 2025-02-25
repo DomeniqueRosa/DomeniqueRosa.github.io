@@ -1,15 +1,15 @@
 <template>
     <div>
-        <p>App funcionando</p>
+        <ColumnCard />
     </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import ColumnCard from './ColumnCard.vue' 
 console.log('aqui')
 </script>
 
 <style scoped>
-p{
-    color : red;
-}
+
 </style>
