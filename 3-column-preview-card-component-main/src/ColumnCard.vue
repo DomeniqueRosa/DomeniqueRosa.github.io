@@ -8,6 +8,7 @@
     >
       <div class="card__text">
         <img :src="card.imgSrc" alt="Vehicle image" />
+        
         <h1>{{ card.title }}</h1>
         <p>{{ card.description }}</p>
       </div>
@@ -19,21 +20,21 @@
 <script setup>
 const cardData = [
   {
-    imgSrc: "/images/icon-sedans.svg",
+    imgSrc: "./images/icon-sedans.svg",
     title: "Sedans",
     description:
       "Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.",
     color: "orange",
   },
   {
-    imgSrc: "/images/icon-suvs.svg",
+    imgSrc: "./images/icon-suvs.svg",
     title: "SUVs",
     description:
       "Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.",
     color: "cyan",
   },
   {
-    imgSrc: "images/icon-luxury.svg",
+    imgSrc: "./images/icon-luxury.svg",
     title: "Luxury",
     description:
       "Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.",
