@@ -11,13 +11,12 @@
         <h1>{{ card.title }}</h1>
         <p>{{ card.description }}</p>
       </div>
-      <button>Learn More</button>
+      <button :class="card.color">Learn More</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
 const cardData = [
   {
     imgSrc: "/images/icon-sedans.svg",
@@ -44,11 +43,31 @@ const cardData = [
 </script>
 
 <style scoped>
-:root {
-  --bright-orange: hsl(31, 77%, 52%);
-  --dark-cyan: hsl(184, 100%, 22%);
-  --very-dark-cyan: hsl(179, 100%, 13%);
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap");
+
+body, button ,p {
+  font-family: "Lexend Deca", sans-serif;
 }
+
+h1 {
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+}
+
+p,
+button {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.8;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .orange {
   background-color: hsl(31, 77%, 52%);
 }
@@ -71,18 +90,48 @@ const cardData = [
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 44px;
+  justify-content: space-around;
+  padding: 10px 40px;
 }
 
+.card:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+.card:last-child{
+  border-radius: 0px 10px 10px 0;
+}
+button {
+  width: 80%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: hsl(0, 0%, 95%) 2px solid;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 0%);
+}
 @media (max-width: 655px) {
   .content {
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    max-width: 375px;
+    
   }
   .card {
-    width: 100%;
-    max-width: none;
+    margin: 0 auto;
+    
+  }
+  .card:first-child{
+    border-radius: 10px 10px 0 0;
+  }
+  .card:last-child{
+    border-radius: 0 0 10px 10px;
+  }
+  button{
+    max-width: 50%;
+
   }
 }
 </style>
