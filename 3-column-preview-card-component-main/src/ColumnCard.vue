@@ -1,11 +1,6 @@
 <template>
   <div class="content">
-    <div
-      class="card"
-      v-for="card in cardData"
-      :key="card.id"
-      :class="card.color"
-    >
+    <div class="card" v-for="card in cardData" :key="card.id" :class="card.color">
       <div class="card__text">
         <img :src="card.imgSrc" alt="Vehicle image" />
         
